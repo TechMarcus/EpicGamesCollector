@@ -3,8 +3,7 @@ from seleniumbase import SB
 import time
 
 class EgsAccount:
-    def __init__(self, cookies, user):
-        self.cookies = cookies
+    def __init__(self, user):
         self.user = user
     def collector(self):
         with SB(uc=True, locale="en",chromium_arg=rf'--user-data-dir=C:\\Users\\{self.user}\\AppData\\Local\\Google\\Chrome\\User Data\\') as sb: #
