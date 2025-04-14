@@ -30,6 +30,7 @@ def collector(sb):
                 free_games = sb.convert_xpath_to_css("/html/body/div[1]/div/div/div[4]/main/div[2]/div/div/div/div[2]/div[2]/span[7]/div/div/section/div")
             except:
                 print("Free games not found by xpath")
+            sb.sleep(1)
             sb.cdp.scroll_into_view(free_games)
             sb.sleep(1)
             for i in range(1,5):
